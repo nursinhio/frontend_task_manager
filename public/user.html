@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>User Dashboard</h1>
+        <h2>Your Tasks</h2>
+
+        
+        <div id="taskDetailsModal" class="modal">
+            <div class="modal-content">
+              <span id="closeModal" class="close">&times;</span>
+              <h3 id="taskTitle" class="task-title"></h3>
+              <p id="taskStatus" class="task-status"></p>
+              <p id="taskCreatedAt" class="task-createdAt"></p>
+              <p id="taskDescription" class="task-description"></p>
+              <p id="taskComments" class="task-comments"></p>
+                
+              <div class="comment-section">
+                <textarea id="commentText" placeholder="Add a comment..." rows="4"></textarea>
+                <button id="addCommentButton" onclick="leaveComment()">Add Comment</button>
+            </div>
+            
+            
+            <div class="task-status-controls">
+                <button id="startButton" onclick="updateTaskStatusToInProgress(taskId)" class="status-button start-btn">Start</button>
+                <button id="finishButton" onclick="updateTaskStatusToFinished(taskId)" class="status-button finish-btn">Finish</button>
+            </div>
+            </div>
+          </div>
+
+        
+        <div id="tasksContainer"></div>
+        
+        <div id="taskDetailsModal" style="display:none;">
+            <div id="taskDetails"></div>
+            <button onclick="closeTaskDetails()">Close</button>
+        </div>
+
+        <div class="buttons">
+            <button id="logoutButton" class="btn">Logout</button>
+        </div>
+    </div>
+    
+    <script src="js/tasks.js"></script>
+</body>
+</html>

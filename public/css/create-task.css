@@ -1,0 +1,161 @@
+/* Сброс стандартных стилей браузера */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Фон и общие стили для страницы */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Основной контейнер */
+#app {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Заголовок */
+h1 {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Форма */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Метки */
+label {
+    font-size: 1rem;
+    color: #333;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Поля ввода */
+input[type="text"],
+input[type="email"],
+input[type="datetime-local"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+/* Поле для комментариев */
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Эффект при фокусе */
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #4CAF50;
+}
+
+/* Кнопка отправки */
+button[type="submit"] {
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+}
+
+/* Эффект при наведении */
+button[type="submit"]:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Эффект при нажатии */
+button[type="submit"]:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Кнопка отмены */
+button.cancel {
+    background-color: #dc3545;
+    color: white;
+    margin-top: 10px;
+}
+
+button.cancel:hover {
+    background-color: #c82333;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    button[type="submit"],
+    button.cancel {
+        font-size: 16px;
+    }
+}
+
+/* Кнопка "Back to Dashboard" */
+#backToDashboard {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff; /* Синий цвет для кнопки */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 15px; /* Отступ сверху */
+}
+
+/* Эффект при наведении */
+#backToDashboard:hover {
+    background-color: #0056b3; /* Более тёмный синий при наведении */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Эффект при нажатии */
+#backToDashboard:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

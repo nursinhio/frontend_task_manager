@@ -1,0 +1,406 @@
+/* Сброс стандартных стилей браузера */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основной фон и шрифт для всей страницы */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Контейнер для всего контента */
+#app {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Заголовок страницы */
+h1 {
+    font-size: 2.2rem;
+    color: #4CAF50;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Стили для кнопок */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    background-color: #4CAF50;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Эффект при наведении на кнопку */
+.btn:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Эффект при нажатии на кнопку */
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Формы и поля ввода */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Стили для сообщений об ошибках */
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Стили для фонов на страницах регистрации и логина */
+.form-container {
+    background-color: #fafafa;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+}
+
+/* Стили для страницы подтверждения */
+#app {
+    text-align: center;
+    padding: 40px;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+button {
+    margin-top: 20px;
+}
+
+#app {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    transition: all 0.3s ease-in-out;
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: #4CAF50;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+#username {
+    font-weight: bold;
+    color: #333;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    background-color: #4CAF50;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.task-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.task-card h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.task-card button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.task-card button:hover {
+    background-color: #0056b3;
+}
+
+/* Модальное окно */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Полупрозрачный фон */
+}
+
+/* Содержимое модального окна */
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 70%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок задачи */
+.task-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Статус задачи */
+.task-status {
+    font-size: 18px;
+    color: #4caf50;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Подробности */
+.task-description, .task-comments {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #555;
+}
+
+/* Кнопка закрытия */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+/* Кнопка для изменения статуса */
+.status-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+}
+
+/* Кнопки при наведении */
+.status-button:hover {
+    background-color: #45a049;
+}
+
+/* Контейнер для кнопок */
+.task-status-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Стиль для модального окна */
+.modal-content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+/* Форматирование для комментариев */
+.comment-section {
+    margin-top: 20px;
+}
+
+.comment-section textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    resize: none;
+    transition: border-color 0.3s ease;
+}
+
+.comment-section textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.comment-section button {
+    margin-top: 10px;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.comment-section button:hover {
+    background-color: #0056b3;
+}
+
+/* Стиль для кнопок "Start" и "Finish" */
+.task-status-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.status-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 48%;
+    transition: background-color 0.3s ease;
+}
+
+.start-btn {
+    background-color: #28a745;
+}
+
+.start-btn:hover {
+    background-color: #218838;
+}
+
+.finish-btn {
+    background-color: #dc3545;
+}
+
+.finish-btn:hover {
+    background-color: #c82333;
+}
+

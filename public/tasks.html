@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="css/admin-tasks.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Task Manager</h1>
+        
+        <table id="taskTable">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Priority</th>
+                    <th>Due Date</th>
+                    <th>Comment</th>
+                    <th>Assignee</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+               
+            </tbody>
+        </table>
+
+        
+        <div id="updateModal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div class="modal-header">
+                    <h2 id="modalTitle">Update Task</h2>
+                </div>
+                <form id="updateForm">
+                    <div class="modal-body">
+                        <label for="updateType">Select Update Type:</label>
+                        <select id="updateType" name="updateType" onchange="toggleFields()">
+                            <option value="status">Status</option>
+                            <option value="priority">Priority</option>
+                            <option value="assigneeEmail">Assignee Email</option>
+                            <option value="comment">Comment</option>
+                        </select>
+                        
+                        <label id="newValueLabel" for="newValue">New Value</label>
+                        <input type="text" id="newValue" name="newValue" required>
+
+                      
+                        <div id="priorityDiv" class="hidden">
+                            <label for="priority">Priority:</label>
+                            <select id="priority" name="priority">
+                                <option value="HIGH">HIGH</option>
+                                <option value="MEDIUM">MEDIUM</option>
+                                <option value="LOW">LOW</option>
+                            </select>
+                        </div>
+    
+                        
+                        <div id="statusDiv" class="hidden">
+                            <label for="status">Status:</label>
+                            <select id="status" name="status">
+                                <option value="IN_PROCESS">IN_PROCESS</option>
+                                <option value="NEW">NEW</option>
+                                <option value="FINISHED">FINISHED</option>
+                            </select>
+                        </div>    
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit">Update</button>
+                        <button type="button" id="cancelButton">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        
+
+        <button id="backToDashboard" class="but">Back to Dashboard</button>
+    </div>
+
+    <script src="js/admin-tasks.js"></script>
+</body>
+</html>
